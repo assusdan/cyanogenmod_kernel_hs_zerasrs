@@ -1005,6 +1005,10 @@ config MTK_APM_16D
 config MTK_EPL2182
 	bool "EPL2182 for MediaTek package"
 	default n
+	
+config MTK_TMD2772_AUTO
+	bool "TMD2772 for MediaTek package"
+	default n
 
 config MTK_EPL2182_NEW
 	bool "EPL2182 for MediaTek package"
@@ -1045,6 +1049,10 @@ config MTK_K2DH
 
 config MTK_BMA222E
 	bool "BMA222E for MediaTek package"
+	default n
+
+config MTK_LSM303D
+	bool "LSM303D for MediaTek package"
 	default n
 
 config MTK_BMA222E_NEW

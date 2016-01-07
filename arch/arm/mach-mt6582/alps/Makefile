@@ -8,8 +8,17 @@ ifeq ($(CONFIG_MTK_STK3X1X),y)
 obj-y	+=  alsps/stk3x1x/
 endif
 
+ifeq ($(CONFIG_MTK_TMD2772_AUTO),y)
+obj-y	+=  alsps/tmd2772/
+endif
+
 ifeq ($(CONFIG_MTK_KXTJ2_1009),y)
 obj-y   +=  accelerometer/KXTJ2_1009/
+endif
+
+
+ifeq ($(CONFIG_MTK_LSM303D),y)
+obj-y   +=  accelerometer/lsm303d/
 endif
 
 endif

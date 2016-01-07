@@ -42,7 +42,7 @@ then
 fi
 
 echo 'Moving DJN'
-mv arch/arm/boot/zImage /var/www/html/CM13_zImage_DJN 
+cp arch/arm/boot/zImage /var/www/html/CM13_zImage_DJN 
 
 
 #write worktime

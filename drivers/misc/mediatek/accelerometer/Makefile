@@ -26,9 +26,15 @@ endif
 ifeq ($(CONFIG_MTK_MPU6050G_NEW),y)
 obj-y   +=  mpu6050g-new/
 endif
+
 ifeq ($(CONFIG_MTK_BMA250),y)
 obj-y   +=  bma250/
 endif
+
+ifeq ($(CONFIG_MTK_LSM303D),y)
+obj-y   +=  lsm303d/
+endif
+
 ifeq ($(CONFIG_MTK_KXTIK1004),y)
 obj-y   +=  kxtik1004/
 endif
