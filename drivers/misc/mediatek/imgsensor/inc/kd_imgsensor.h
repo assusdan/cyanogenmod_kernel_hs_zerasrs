@@ -95,6 +95,7 @@
 *
 ********************************************************************************/
 /* SENSOR CHIP VERSION */
+#define SP2529_SENSOR_ID 						0x0025
 #define IMX179_SENSOR_ID                        0x0179
 #define OV2722MIPI_SENSOR_ID                    0x2722
 #define MC501CB_SENSOR_ID                       0x0062
@@ -272,6 +273,7 @@
 #define CAMERA_HW_DEVNAME            "kd_camera_hw"
 
 /* SENSOR DEVICE DRIVER NAME */
+#define SENSOR_DRVNAME_SP2529_YUV   "sp2529yuv"
 #define SENSOR_DRVNAME_IMX179_MIPI_RAW   "imx179mipiraw"
 #define SENSOR_DRVNAME_OV2722_MIPI_RAW  "ov2722mipiraw"
 #define SENSOR_DRVNAME_MT9P012_RAW  "mt9p012"

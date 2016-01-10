@@ -1,5 +1,3 @@
-
 include $(srctree)/drivers/misc/mediatek/Makefile.custom
 
-obj-y += gc0313mipi_yuv_Sensor.o
-
+obj-y += BU6424AF.o
