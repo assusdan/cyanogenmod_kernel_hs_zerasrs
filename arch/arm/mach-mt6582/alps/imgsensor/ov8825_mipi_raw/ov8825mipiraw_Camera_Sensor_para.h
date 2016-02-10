@@ -2,10 +2,10 @@
 
 
 /*******************************************************************************************/
-
+   
 /* SENSOR FULL SIZE */
-#ifndef _OV5648MIPI_CAMERA_SENSOR_PARA_H
-#define _OV5648MIPI_CAMERA_SENSOR_PARA_H
+#ifndef __CAMERA_SENSOR_PARA_H
+#define __CAMERA_SENSOR_PARA_H
 
 #define CAMERA_SENSOR_REG_DEFAULT_VALUE  \
     /* ARRAY: SENSOR.reg[11] */\
