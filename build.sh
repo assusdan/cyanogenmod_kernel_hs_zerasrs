@@ -6,9 +6,9 @@
 echo 'Start building...'
 
 # Set options
-export ARCH=arm CROSS_COMPILE=../toolchain/linaro-4.9/bin/arm-linux-androideabi-
+export ARCH=arm CROSS_COMPILE=../android_toolchain/linaro-4.9/bin/arm-linux-androideabi-
 export KBUILD_BUILD_USER=assusdan
-export KBUILD_BUILD_HOST=SkyDroidTeam
+export KBUILD_BUILD_HOST=SmartRomTeam
 
 #For checking errors
 echo 'Remove kernel...'
@@ -46,10 +46,8 @@ cp arch/arm/boot/zImage /var/www/html/CM13_zImage_DJN
 
 
 #write worktime
-echo $[$SECONDS / 60]
-echo 'minutes'
-echo $[$SECONDS % 60]
-echo 'seconds' 
+echo $[$SECONDS / 60]' minutes'
+echo $[$SECONDS % 60]' seconds' 
 
 #echo 'Configure A'
 #make zerasra_defconfig >/dev/null
