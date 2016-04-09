@@ -1740,6 +1740,10 @@ config MTK_LENS_MT9P017AF_SUPPORT
 config MTK_LENS_OV8825AF_SUPPORT
 	bool "OV8825AF Lens Driver"
 	default n
+	
+config MTK_LENS_BU6424AF_SUPPORT
+	bool "BU6424AF Lens Driver"
+	default n
 
 config MTK_LENS_SENSORDRIVE_SUPPORT
 	bool "SENSORDRIVE Lens Driver"

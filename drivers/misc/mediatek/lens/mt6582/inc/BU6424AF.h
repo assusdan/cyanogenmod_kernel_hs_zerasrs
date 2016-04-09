@@ -1,10 +1,10 @@
-#ifndef _FM50AF_H
-#define _FM50AF_H
+#ifndef _BU6424AF_H
+#define _BU6424AF_H
 
 #include <linux/ioctl.h>
 //#include "kd_imgsensor.h"
 
-#define FM50AF_MAGIC 'A'
+#define BU6424AF_MAGIC 'A'
 //IOCTRL(inode * ,file * ,cmd ,arg )
 
 
@@ -22,7 +22,7 @@ bool          bIsMotorMoving;
 bool          bIsMotorOpen;
 //Support SR?
 bool          bIsSupportSR;
-} stFM50AF_MotorInfo;
+} stBU6424AF_MotorInfo;
 
 //Control commnad
 //S means "set through a ptr"
@@ -31,13 +31,13 @@ bool          bIsSupportSR;
 //Q means "get by return a value"
 //X means "switch G and S atomically"
 //H means "switch T and Q atomically"
-#define FM50AFIOC_G_MOTORINFO _IOR(FM50AF_MAGIC,0,stFM50AF_MotorInfo)
+#define BU6424AFIOC_G_MOTORINFO _IOR(BU6424AF_MAGIC,0,stBU6424AF_MotorInfo)
 
-#define FM50AFIOC_T_MOVETO _IOW(FM50AF_MAGIC,1,unsigned long)
+#define BU6424AFIOC_T_MOVETO _IOW(BU6424AF_MAGIC,1,unsigned long)
 
-#define FM50AFIOC_T_SETINFPOS _IOW(FM50AF_MAGIC,2,unsigned long)
+#define BU6424AFIOC_T_SETINFPOS _IOW(BU6424AF_MAGIC,2,unsigned long)
 
-#define FM50AFIOC_T_SETMACROPOS _IOW(FM50AF_MAGIC,3,unsigned long)
+#define BU6424AFIOC_T_SETMACROPOS _IOW(BU6424AF_MAGIC,3,unsigned long)
 
 #else
 #endif

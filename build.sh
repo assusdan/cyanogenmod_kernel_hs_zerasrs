@@ -1,57 +1,28 @@
-#!/bin/bash
-
-#get changes from  GitHub 
-#echo 'Get changes from GitHub'
-#git pull
-echo 'Start building...'
-
-# Set options
 export ARCH=arm CROSS_COMPILE=../android_toolchain/linaro-4.9/bin/arm-linux-androideabi-
 export KBUILD_BUILD_USER=assusdan
-export KBUILD_BUILD_HOST=SmartRomTeam
+export KBUILD_BUILD_HOST=SRT
 
-#For checking errors
+    #For checking errors
 echo 'Remove kernel...'
 rm -rf arch/arm/boot/zImage
 
 
-#echo 'Configure CS'
-#make zerasrs_cs_defconfig >/dev/null
-#echo 'Build CS'
-#make -j4 zImage >/dev/null 2>build.log
+echo 'Configure CM Zera S '
+make alps_defconfig >/dev/null
 
-#check errors
-#if [ ! -f arch/arm/boot/zImage ]
-#then
-#    echo "BUID ERRORS!"
-#fi
+echo 'Building CM Zera S'
+make -j4 zImage >/dev/null 2>buildlog.log
 
-#if OK
-#echo 'Moving CS'
-#mv arch/arm/boot/zImage /var/www/html/zImage_CS 
-
-echo 'Configure DJN'
-make alps_defconfig 
-echo 'Build DJN'
-make -j4 zImage >/dev/null 2>build.log
-
-#check errors in DJN driver 
+    #check errors
 if [ ! -f arch/arm/boot/zImage ]
 then
-    echo "DJN PART ERROR"
+    echo "BUID ERRORS!"
+else
+ #if OK
+echo 'Moving CM Zera S'
+mv arch/arm/boot/zImage /var/www/compiled/CM-zImage-zeras
 fi
-
-echo 'Moving DJN'
-cp arch/arm/boot/zImage /var/www/html/CM13_zImage_DJN 
 
 
 #write worktime
-echo $[$SECONDS / 60]' minutes'
-echo $[$SECONDS % 60]' seconds' 
-
-#echo 'Configure A'
-#make zerasra_defconfig >/dev/null
-#echo 'Build A'
-#make -j4 zImage >/dev/null 2>buildlog.log
-#echo 'Moving A'
-#mv arch/arm/boot/zImage /var/www/html/zImage_A 
+echo $[$SECONDS / 60]' minutes '$[$SECONDS % 60]' seconds' 

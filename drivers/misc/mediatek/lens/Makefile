@@ -14,4 +14,5 @@ include $(srctree)/drivers/misc/mediatek/Makefile.custom
 	obj-$(CONFIG_MTK_LENS_DW9714AF_SUPPORT)  +=  mt6582/dw9714af/
 	obj-$(CONFIG_MTK_LENS_DW9714A_SUPPORT)   +=  mt6582/dw9714a/
 	obj-$(CONFIG_MTK_LENS_DW9718AF_SUPPORT)  +=  mt6582/dw9718af/
+	obj-$(CONFIG_MTK_LENS_BU6424AF_SUPPORT)  +=  mt6582/bu6424af/
 
